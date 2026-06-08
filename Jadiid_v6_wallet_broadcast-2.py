@@ -278,8 +278,7 @@ async def add_to_cart(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     save_cart(uid, cart)
 
     await query.edit_message_text(
-        f"✅ {p['name']} به سبد خرید اضافه شد.
-تعداد اقلام: {len(cart)}",
+        f"✅ {p['name']} به سبد خرید اضافه شد.\nتعداد اقلام: {len(cart)}",
         reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton("💳 ادامه و پرداخت", callback_data="checkout")],
             [InlineKeyboardButton("🛒 مشاهده سبد", callback_data="my_cart")]
